@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id:  2024-08-26-1
+      author:  p.paramonov
+      comment: init schema costs fot app CostsApp
+      changes:
+        sql: "CREATE SCHEMA IF NOT EXISTS costs;"

@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - include:
+      file: changelog/0.changelog-init-schema.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: changelog/changelog-init-table-login_attempt.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: changelog/4.changelog-init-table-operation.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: changelog/changelog-init-table-user.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: changelog/3.changelog-init-table-wallet.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: changelog/1.changelog-init-table-chat-state.yaml
+      relativeToChangelogFile: true

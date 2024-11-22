@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id:  2024-08-31-2
+      author:  p.paramonov
+      comment: create table login_attempt
+      changes:
+        createTable:
+          schemaName: costs
+          tableName: login_attempt
+          columns:
+            - column:
+                name: id
+                type: BIGINT
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: email
+                type: VARCHAR(255)
+                constraints:
+                  nullable: false
+            - column:
+                name: success
+                type: BOOLEAN
+                defaultValue: false
+            - column:
+                name: created_at
+                type: TIMESTAMP
+                defaultValue: now()
+                constraints:
+                  nullable: false

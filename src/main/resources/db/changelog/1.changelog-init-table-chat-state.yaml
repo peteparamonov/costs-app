@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2024-10-02-2
+      author: p.paramonov
+      comment: init table chat-state for app CostsApp
+      changes:
+        createTable:
+          schemaName: costs
+          tableName: chat_state
+          columns:
+            - column:
+                name: chat_id
+                type: BIGINT
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: state
+                type: VARCHAR
+                constraints:
+                  nullable: false

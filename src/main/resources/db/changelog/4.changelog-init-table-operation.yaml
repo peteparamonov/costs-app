@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id:  2024-08-26-1
+      author:  p.paramonov
+      comment: init schema costs fot app CostsApp
+      changes:
+        createTable:
+          schemaName: costs
+          tableName: operation
+          columns:
+            - column:
+                name: id
+                type: BIGINT
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: operation_type
+                type: VARCHAR(64)
+                constraints:
+                  nullable: false
+            - column:
+                name: amount
+                type: NUMERIC(6,2)
+                constraints:
+                  nullable: false
+            - column:
+                name: operation_date
+                type: DATE
+                constraints:
+                  nullable: false
+            - column:
+                name: wallet_id
+                type: BIGINT
+                constraints:
+                  nullable: false
+                  foreignKey:
+                    references: wallet(id)
